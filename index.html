@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arrow Function</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  #regular {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  #arrow {
+    background-color: #28a745;
+    color: #fff;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div>
+  <button id="regular">Call Regular Function</button>
+  <button id="arrow">Call Arrow Function</button>
+</div>
+
+<script>
+( function ( ) {
+
+  let regular = function() { alert( this  ) }
+  window.document.getElementById('regular').addEventListener('click', regular )
+
+  let arrow = () => alert( this )
+  window.document.getElementById('arrow').addEventListener('click', arrow )
+
+} ) ( )
+</script>
+</body>
+</html>
